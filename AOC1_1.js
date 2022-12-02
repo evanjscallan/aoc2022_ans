@@ -2264,6 +2264,7 @@ let numArray;
    After the list is created, we need to turn the values which are currently strings into numbers.
    We implement a map function to change the type of all items in the list.
 */
+/*
 class Formatter {
     constructor(elves){
         this.elves = elves
@@ -2277,10 +2278,20 @@ class Formatter {
         return numArray;
     }  
 }
+*/
+let strArray2;
+let numArray2;
+
+const formatTheArray = () => {
+    numArray2 = elves.replaceAll(`\n`, " ").split(" ").map(Number)
+    return numArray2;
+}
+
+formatTheArray()
 
 //instantiating class and storing values in variables to be used later 
-let myFormat = new Formatter(elves)
-let myStrArray = myFormat.makeArray()
+//let myFormat = new Formatter(elves)
+//let myStrArray = myFormat.makeArray()
 let newNumArray = myFormat.makeNum(myStrArray)
 
 //combining items in list -- 0 is the 'separation' mark for different elves 
